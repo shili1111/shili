@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ng-app="myCalculator">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="assets/calculator.css" />
+		<script type="text/javascript" src="assets/angular.min.js"></script>
+		<script type="text/javascript" src="assets/calculator.js"></script>
+		<title>Calculator</title>
+	</head>
+	<body>
+
+		<div id="myCalculator" ng-controller="CalculatorController">
+			<div id="main">
+					<section class="inc">
+						<div>
+						<h4>Incandescent</h4>
+						<p>{{inc_wattage}}</p>
+						<p>{{inc_cost}}</p>
+						</div>
+					</section>
+	
+	
+					<section class="hal">
+						<div>
+						<h4>Halogen</h4>
+						<p>{{hal_wattage}}</p>
+						<p>{{hal_cost}}</p>
+						</div>
+					</section>
+		
+					<section class="cfl">
+						<div>
+						<h4>CFL</h4>
+						<p>{{cfl_wattage}}</p>
+						<p>{{cfl_cost}}</p>
+						</div>
+					</section>
+			<section class="led">
+				
+						<div>
+						<h4>LED</h4>
+						<p>{{led_wattage}}</p>
+						<p>{{led_cost}}</p>
+					   </div>
+					
+				</section>						
+			</div>
+			<form>
+				<div>
+					<h4>Lumens</h4>
+					<p>Brightness <br>of bulb</p>
+					<select ng-model="current_lumens" ng-change="calculator()" ng-options="o as o for o in lumen_options">						
+					</select>
+				</div>
+				<div>
+					<h4>kwh</h4>
+					<p>Kilowatt-<br>hour cost</p>
+					<input type="number" ng-change="calculator()" ng-model="current_cost" value="{{current_cost}}" />cents
+				</div>
+				<div>
+					<h4>Hours</h4>
+					<p>Usage <br>per day</p>
+					<input type="number"  ng-change="calculator()" ng-model="current_hours" value="{{current_hours}}" />
+				</div>
+			</form>
+		</div>
+
+	</body>
+</html>

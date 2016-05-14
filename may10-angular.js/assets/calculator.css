@@ -1,0 +1,166 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700|Open+Sans+Condensed:700);
+
+.clearfix{
+	overflow:hidden;
+}
+#myCalculator{ 
+	overflow:hidden;
+	margin: 0; padding: 0; font-size: 16px; font-family: 'Open Sans', sans-serif; font-weight: 300; line-height: 24px; max-width: 800px; }
+
+#main{
+	overflow:hidden;
+	background-color:#444;
+}
+#main section{
+	width:25%;
+	float:left;
+	text-align:center;
+	padding-top:110px;
+	color:#fff;
+	background-repeat:no-repeat;
+	background-position:center 5px;
+	background-size:63px 100px;
+}
+
+.inc{
+	background-color:#ba2d2d;
+	background-image:url(images/bulb_inc.svg);
+}
+
+
+.hal{
+	background-color:#de6615;
+	background-image:url(images/bulb_hal.svg);
+}
+.cfl{
+	background-color:#efc20f;
+	background-image:url(images/bulb_cfl.svg);
+}
+.led{
+	background-color:#36b23c;
+	background-image:url(images/bulb_led.svg);
+}
+section div{
+	background-color:rgba(0,0,0,.15);
+	padding:5px 0;
+}
+
+h4{
+	font-family:'Open Sans Condensed', sans-serif;
+	font-size:.8em;
+	letter-spacing:1px;
+	margin:0 0 5px 0;
+	text-transform:uppercase;
+}
+
+#main p{
+	margin:0;
+	font-size:1.5em;
+	font-weight:700;
+}
+
+#main p+p{
+	font-size:1em;
+	font-weight:300;
+	
+}
+
+#main p::after{
+	content:'w';
+}
+
+#main p+p::before {
+	content:'$';
+}
+
+#main p+p::after {
+	content:'per year';
+	color:rgba(255,255,255,.5);
+	padding-left:4px;
+}
+
+#myCalculator form{
+	background-color:#000;
+	margin:0;
+	padding:10px 0;
+}
+
+#myCalculator form br{
+	display:none;
+}
+
+#myCalculator form div{
+	color:#fff;
+	width:33%;
+	float:left;
+	text-align:center;
+	padding:10px 0 5px 0;
+	
+}
+
+#myCalculator form:after{
+	content:'';
+	display:block;
+	clear:both;
+}
+
+
+form h4{
+	color:#aaa;
+	margin:0 0 -5px 0;
+	font-size:1.5em;
+	font-weight:300;
+}
+
+form p{
+	color:#888;
+	margin:0 0 6px 0;
+	font-size:0.9em;
+	
+}
+
+form input[type=number]{
+	width:50px;
+	text-align:left;
+	font-size:1em;
+}
+
+
+form select{
+	font-size:1em;
+	-webkit-appearance: none;
+	-moz-appearance:none;
+	-ms-appearance:none;
+	-o-appearance:none;
+	appearance:none;
+	background:#fff url(images/icons_arrows.svg) no-repeat right 6px;
+	background-size:30px 20px;
+	padding:3px 30px 3px 5px;
+}
+
+#myCalculator form select::-ms-expand{
+	display:none;
+}
+
+@media screen and (max-width:500px){
+	#myCalculator{font-size:15px;}
+	#main section{background-size:45px 71px;padding-top:80px;}
+	#main h4{margin:0;font-size:.75em;letter-spacing:0;}
+	#main p{font-size:1.1em;}
+	#main p+p{font-size:1em;}
+	#main p+p::after{display:block;margin-top:-3px;color:#fff;}
+	
+	form h4{font-size:1.1em;margin:0;}
+	form p{font-size:.8em; line-height:14px;}
+	form br{display:inline;}
+	form input[type=number]{width:30px;font-size:.8em;}
+	form select{font-size:.8em;}
+}
+
+
+
+
+
+
+
